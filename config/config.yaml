@@ -1,0 +1,31 @@
+# 输入样本表 (TSV): sample, r1, r2
+samples: "config/samples.tsv"
+
+# 注释与索引
+star_index: "/path/to/star_index"
+salmon_index: "/path/to/salmon_index"
+gtf: "/path/to/annotation.gtf"
+fasta: "/path/to/genome.fa"
+rseqc_bed: "/path/to/annotation.bed"
+tx2gene: "config/tx2gene.tsv"
+metadata: "config/metadata.tsv"
+
+# 线程与参数
+threads: 8
+fastp_extra: "--detect_adapter_for_pe --cut_front --cut_tail"
+star_extra: "--quantMode GeneCounts"
+salmon_libtype: "A"
+salmon_extra: "--validateMappings"
+
+# Qualimap 链特异性参数: non-strand-specific=non-strand-specific, forward=strand-specific-forward, reverse=strand-specific-reverse
+strandness: "non-strand-specific"
+
+# DESeq2 参数
+# 例如：design: "~ condition"
+design: "~ condition"
+condition_col: "condition"
+reference_level: "condition,control"
+
+# contrast 命名格式: condition:treatment:control
+contrasts:
+  - "condition:treatment:control"

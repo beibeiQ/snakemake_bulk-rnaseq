@@ -1,0 +1,11 @@
+name: rnaseq_deseq2
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - r-base
+  - r-optparse
+  - bioconductor-deseq2
+  - bioconductor-tximport
+  - r-tidyverse

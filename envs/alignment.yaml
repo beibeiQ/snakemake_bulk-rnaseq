@@ -1,0 +1,8 @@
+name: rnaseq_alignment
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - star
+  - samtools
