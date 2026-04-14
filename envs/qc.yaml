@@ -1,0 +1,11 @@
+name: rnaseq_qc
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - fastqc
+  - fastp
+  - multiqc
+  - rseqc
+  - qualimap
